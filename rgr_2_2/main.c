@@ -6,6 +6,34 @@
 int main(void)
 {
 	system("chcp 1251>nul");
+	int cvartal;
+	printf("Введите номер квартала от 1 до 4 \n");
+	if (scanf("%d", &cvartal) != 1 || cvartal>0 || cvartal<5)
+	{
+		printf("Некоректный ввод...");
+		return 0;
+	}
+
+	switch (cvartal)
+	{
+	case 1:
+		printf("Январь, Февраль, Март \n");
+		break;
+	case 2:
+		printf("Апрель, Май, Июнь \n");
+		break;
+	case 3:
+		printf("Июль, Август, Сентябрь \n");
+		break;
+	case 4:
+		printf("Октябрь, Ноябрь, Декабрь \n");
+		break;
+	default:
+		printf("Нету такого месяца \n");
+	}
+			
+
+
 
 	double x = 4;
 	double y = 5;
