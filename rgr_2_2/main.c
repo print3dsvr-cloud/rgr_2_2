@@ -6,9 +6,35 @@
 int main(void)
 {
 	system("chcp 1251>nul");
+	
+	
+	
+	
+	
+	double inum;
+	double result;
+
+	printf("Введите x \n");
+	if (scanf("%lf", &inum) != 1)
+	{
+		printf("Некоректный ввод...");
+		return 0;
+	}
+	if (inum >= -3 && inum <= 3)
+	{// -sqrt(|x|)
+		result = -1 * sqrt(abs(inum));
+	}
+	else
+	{
+		result = sin(2 * inum);
+	}
+	printf("%lf\n", result);
+	
+	
+	
 	int cvartal;
 	printf("Введите номер квартала от 1 до 4 \n");
-	if (scanf("%d", &cvartal) != 1 || cvartal>0 || cvartal<5)
+	if (scanf("%d", &cvartal) != 1 || cvartal<0 || cvartal>5)
 	{
 		printf("Некоректный ввод...");
 		return 0;
