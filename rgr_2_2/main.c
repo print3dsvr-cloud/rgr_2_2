@@ -7,6 +7,31 @@ int main(void)
 {
 	system("chcp 1251>nul");
 	
+	
+	int item = 0;
+	double discount = 1;
+	double price = 0;
+	double all_price = 0;
+	printf("введите цену  ");
+
+
+	scanf("%lf", &price);
+	printf("введите кол-во  ");
+	scanf("%d", &item);
+	if (item > 100)
+	{
+		discount = 0.95;
+	}
+	if (item > 300)
+	{
+		discount = 0.9;
+	}
+	all_price = price * item * discount;
+	printf("сумма со скидкой %lf\n", all_price);
+
+	system("pause");
+
+	
 	double r, L, U, f, Xl, I, E;
 	int a, b, c;
 	double rezistor[16];
@@ -15,7 +40,6 @@ int main(void)
 	int lenghtR = 0;
 	int menu = 0;
 	int menuI = 0;
-
 
 
 
