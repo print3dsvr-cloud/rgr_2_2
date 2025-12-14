@@ -7,6 +7,65 @@ int main(void)
 {
 	system("chcp 1251>nul");
 
+	double x = 4;
+	double y = 5;
+	double z = 4;
+	printf("Введите x \n");
+	if (scanf("%lf", &x) != 1 )
+	{
+		printf("Некоректный ввод...");
+		return 0;
+	}
+	printf("Введите y \n");
+	if (scanf("%lf", &y) != 1)
+	{
+		printf("Некоректный ввод...");
+		return 0;
+	}
+	printf("Введите z \n");
+	if (scanf("%lf", &z) != 1)
+	{
+		printf("Некоректный ввод...");
+		return 0;
+	}
+	
+	if (x == y && x == z) { { printf("все числа рaвны\n"); return; } }
+
+	if (x == y )
+	{
+		printf("x=y\n");
+		if (x > z) { printf("x&y самое большое\n"); }
+
+		if (x < z ) { printf("z самое большое\n"); }
+		return;
+	}
+	if (y == z)
+	{
+		printf("y=z\n");
+		if (y > x) { printf("z&y самое большое\n"); }
+
+		if (y < x) { printf("x самое большое\n"); }
+		return;
+	}
+	if (x == z)
+	{
+		printf("x=z\n");
+		if (x > y) { printf("x&z самое большое\n"); }
+
+		if (x < y) { printf("y самое большое\n"); }
+		return;
+	}
+	if (x > y && x > z) { printf("x самое большое\n"); }
+	if (y > x && y > z) { printf("y самое большое\n"); }
+	if (z > x && z > y) { printf("z самое большое\n"); }
+
+	if (x < y && x < z) { printf("x самое маленькое\n"); }
+	if (y < x && y < z) { printf("y самое маленькое\n"); }
+	if (z < x && z < y) { printf("z самое маленькое\n"); }
+
+	
+
+
 	double r, L, U, f, Xl, I, E;
 	int a, b, c;
 	double rezistor[16];
